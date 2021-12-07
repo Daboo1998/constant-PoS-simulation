@@ -58,9 +58,8 @@ class Simulation:
         return idx
 
     def generate_reward(self, step, R, T):
-        #geometric reward
-        reward = (1+R)**(step/T)-(1+R)**((step-1)/T)
-            
+        # constant reward
+        reward = R/T    
         return reward
 
     def run(self, steps, should_print_intermediate_states, experiment=None):
